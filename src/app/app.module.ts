@@ -5,15 +5,19 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([{ path: "", component: LoginComponent }])
+    RouterModule.forRoot([
+      { path: "", component: LoginComponent },
+      { path: "register", component: RegisterComponent }
+    ])
   ],
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegisterComponent],
   bootstrap: [LoginComponent]
 })
 export class AppModule {}
